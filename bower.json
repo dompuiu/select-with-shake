@@ -1,0 +1,16 @@
+{
+  "name": "sneak",
+  "version": "0.0.0",
+  "dependencies": {
+    "sass-bootstrap": "",
+    "jquery": "",
+    "underscore": "",
+    "backbone": "",
+    "requirejs": "",
+    "requirejs-text": "",
+    "modernizr": "",
+    "marionette": "",
+    "swiper": ""
+  },
+  "devDependencies": {}
+}
