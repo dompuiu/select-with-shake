@@ -25,5 +25,7 @@ require.config
 
 require [
   'application'
-], (Application) ->
-  Application.MyApp.start()
+  'modules/slider/SliderController'
+  'modules/endVote/EndVoteController'
+], (MyApp) ->
+  MyApp.start()
