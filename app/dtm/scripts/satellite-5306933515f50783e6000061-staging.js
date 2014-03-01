@@ -1,0 +1,1 @@
+MyApp.execute('endVote')
