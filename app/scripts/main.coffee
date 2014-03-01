@@ -27,5 +27,6 @@ require [
   'application'
   'modules/slider/SliderController'
   'modules/endVote/EndVoteController'
+  'modules/deviceMotionInfo/DeviceMotionInfoController'
 ], (MyApp) ->
   MyApp.start()

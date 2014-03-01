@@ -14,13 +14,13 @@ define [
 
     VotingSlidesApp.Controller =
       showSlider: ->
-        voteModel = new MyApp.VotingApp.Slides.VoteModel()
+        voteModel = new VotingSlidesApp.VoteModel()
 
         MyApp.vent.on 'sneakChange', (sneak, rank) ->
           voteModel.set 'sneak', sneak
           voteModel.set 'rank', rank
 
-        view = new MyApp.VotingApp.Slides.SneaksView
+        view = new VotingSlidesApp.SneaksView
           collection: new Backbone.Collection MyApp.request("voting:options")
           class: 'parent'
 

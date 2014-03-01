@@ -1,7 +1,7 @@
 define [
   'application'
   'templates'
-], (MyApp) ->
+], (MyApp, JST) ->
   MyApp.module "VotingApp.Slides", (VotingSlidesApp, MyApp, Backbone, Marionette, $, _, JST) ->
     sneaks = []
     SwiperClass = VotingSlidesApp.SwiperClass

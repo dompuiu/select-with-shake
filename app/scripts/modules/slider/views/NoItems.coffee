@@ -1,7 +1,7 @@
 define [
   'application'
   'templates'
-], (MyApp) ->
+], (MyApp, JST) ->
   MyApp.module "VotingApp.Slides", (VotingSlidesApp, MyApp, Backbone, Marionette, $, _, JST) ->
 
     class VotingSlidesApp.NoItemsView extends Marionette.ItemView

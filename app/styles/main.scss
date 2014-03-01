@@ -15,8 +15,30 @@ body {
   line-height: 1.5;
 }
 
+#info-region {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 2;
+}
+
+#device-motion-info {
+  width: 140px;
+}
+
+#device-motion-info .close {
+  font-size: 30px;
+  position: relative;
+  top: -5px;
+}
+
 #sneak {
   display: none;
+}
+
+.glyphicon {
+  color: #fff;
+  font-size: 30px;
 }
 
 .swiper-container {
