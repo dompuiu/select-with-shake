@@ -20,13 +20,19 @@ define [
         @render()
 
       detectShow: ->
-        @$el.removeClass 'out'
-        @$el.addClass 'in'
-        clearInterval @timeoutId
+        @$el.removeClass 'hide'
+        setTimeout =>
+          @$el.removeClass 'out'
+          @$el.addClass 'in'
 
+        clearInterval @timeoutId
         @timeoutId = setTimeout =>
           @$el.removeClass 'in'
           @$el.addClass 'out'
+
+          setTimeout =>
+            @$el.addClass 'hide'
+          , 500
 
           @model.trigger('restart')
         , 5000
@@ -34,6 +40,7 @@ define [
       updateSlider: ->
         percentage = (@model.get 'percentage') + '%'
         setTimeout =>
-          $('.progress-bar', @$el).animate({width: percentage})
+          $('.progress-bar', @$el)
+            .animate({width: percentage})
 
   , JST
