@@ -15,6 +15,20 @@ body {
   line-height: 1.5;
 }
 
+#counter-region {
+  position: absolute;
+  left: 0px;
+  bottom: 20px;
+  z-index: 2;
+  width: 100%;
+  padding: 20px;
+}
+
+.shake-counter p {
+  color: #fff;
+  text-align: center;
+}
+
 #info-region {
   position: absolute;
   right: 10px;

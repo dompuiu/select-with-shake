@@ -1,1 +1,1 @@
-MyApp.execute('endVote')
+MyApp.vent.trigger('shake')

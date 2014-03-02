@@ -1,7 +1,7 @@
 define [
   'application'
   'templates'
-], (MyApp) ->
+], (MyApp, JST) ->
   MyApp.module "EndVoteApp", (EndVoteApp, MyApp, Backbone, Marionette, $, _, JST) ->
 
     class EndVoteApp.ResultView extends Marionette.ItemView

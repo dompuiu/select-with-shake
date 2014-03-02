@@ -6,6 +6,7 @@ define [
   MyApp.addRegions
       mainRegion: '#main-region'
       infoRegion: '#info-region'
+      counterRegion: '#counter-region'
 
   MyApp.commands.setHandler 'reload', ->
     location.reload()

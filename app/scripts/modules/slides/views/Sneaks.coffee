@@ -54,7 +54,7 @@ define [
 
       className: 'swiper-view'
       itemViewContainer: '.swiper-wrapper'
-      template: JST['app/scripts/modules/slider/templates/Sneaks.ejs']
+      template: JST['app/scripts/modules/slides/templates/Sneaks.ejs']
       itemView: VotingSlidesApp.SneakView
       emptyView: VotingSlidesApp.NoItemsView
   , JST

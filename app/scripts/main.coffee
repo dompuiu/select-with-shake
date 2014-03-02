@@ -25,8 +25,9 @@ require.config
 
 require [
   'application'
-  'modules/slider/SliderController'
+  'modules/slides/SlidesController'
   'modules/endVote/EndVoteController'
   'modules/deviceMotionInfo/DeviceMotionInfoController'
+  'modules/shakeCounter/ShakeCounterController'
 ], (MyApp) ->
   MyApp.start()

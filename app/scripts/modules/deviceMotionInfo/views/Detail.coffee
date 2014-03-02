@@ -8,14 +8,26 @@ define [
       template: JST['app/scripts/modules/deviceMotionInfo/templates/Detail.ejs']
       events:
         'click .close': 'showInfoIcon'
+
       initialize: ->
+        @listenTo DeviceMotionApp, 'shake', @onShake
+
         @model = new DeviceMotionApp.DetailModel
         window.addEventListener 'devicemotion', @updateData, false
-        window.addEventListener 'shake', @shakeDetected, false
 
       onClose: ->
         window.removeEventListener 'devicemotion', @updateData
-        window.removeEventListener 'shake', @shakeDetected
+
+      onShake: ->
+        @model.trigger 'shake'
+
+        clearInterval @timeoutId
+        @timeoutId = setTimeout =>
+          @model.trigger 'restart'
+          @render()
+        , 2000
+
+        @render()
 
       updateData: (e) =>
         current = e.accelerationIncludingGravity
@@ -27,7 +39,7 @@ define [
         @.render()
 
       shakeDetected: (e) =>
-        @model.shakeChange()
+        @model.trigger 'shake'
         @.render()
 
       showInfoIcon: ->

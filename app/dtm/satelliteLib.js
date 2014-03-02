@@ -3377,8 +3377,8 @@ _satellite.init({
         "account": "mxdmsphonegapapp",
         "euCookie": false,
         "sCodeURL": {
-            "http": "http://www.designstation.ro/serban/dtm-sneak-grid/cab903919c5ba648c6bbfa31ef88ef2e2ebb3cbe/sc.js",
-            "https": "https://www.designstation.ro/serban/dtm-sneak-grid/cab903919c5ba648c6bbfa31ef88ef2e2ebb3cbe/sc.js",
+            "http": "http://www.designstation.ro/serban/dtm-sneak-grid/dtm/sc.js",
+            "https": "https://www.designstation.ro/serban/dtm-sneak-grid/dtm/sc.js",
         },
         "renameS": "s",
         "initVars": {
@@ -3443,7 +3443,7 @@ _satellite.init({
       "adobe.com"
     ],
     "spansSubdomains": false,
-    "scriptDir": "cab903919c5ba648c6bbfa31ef88ef2e2ebb3cbe/scripts/",
+    "scriptDir": "dtm/scripts/",
     "tagTimeout": 3000
   },
   "data": {

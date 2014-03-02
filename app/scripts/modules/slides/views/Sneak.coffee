@@ -6,7 +6,7 @@ define [
     index = 1
 
     class VotingSlidesApp.SneakView extends Marionette.ItemView
-      template: JST['app/scripts/modules/slider/templates/Sneak.ejs']
+      template: JST['app/scripts/modules/slides/templates/Sneak.ejs']
 
       attributes: ->
         class: -> VotingSlidesApp.RandomClass.getClass()

@@ -19,9 +19,18 @@ define [
       onShowInfoIcon: ->
         MyApp.infoRegion.show new DeviceMotionApp.InfoView
 
-
     DeviceMotionApp.on 'start', ->
       new AppController
       DeviceMotionApp.trigger('showInfoIcon')
+
+    DeviceMotionApp.on 'stop', ->
+      MyApp.removeRegion 'infoRegion'
+
+    MyApp.vent.on 'shake', ->
+      DeviceMotionApp.trigger 'shake'
+
+    MyApp.vent.on 'endVote', ->
+      DeviceMotionApp.stop()
+
 
   , JST

@@ -15,6 +15,7 @@ define [
         MyApp.mainRegion.show view
 
     MyApp.commands.setHandler 'endVote', ->
-      #EndVoteApp.Controller.showResult()
+      MyApp.vent.trigger 'endVote'
+      EndVoteApp.Controller.showResult()
 
   , JST
