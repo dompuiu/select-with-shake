@@ -3133,7 +3133,7 @@ SL.extend(SiteCatalystTool.prototype, {
   },
   $trackLink: function(elm, evt, params){
     var type = params && params.type
-    var linkName = params && params.linkName || (elm && elm.nodeName.toLowerCase() === 'a' ? elm.innerHTML : '') ||
+    var linkName = params && params.linkName || (elm && elm.nodeName && elm.nodeName.toLowerCase() === 'a' ? elm.innerHTML : '') ||
       'link clicked'
     var vars = params && params.setVars
     var events = params && params.addEvent
@@ -3408,18 +3408,6 @@ _satellite.init({
             "data": []
           }]
         }]
-      },{
-          "engine": "sc",
-          "command": "trackLink",
-          "arguments": [{
-              "setVars": {
-                  "eVar10": "%Sneak%",
-                  "eVar11": "%Rank%",
-				 "prop10": "%Sneak%",
-                  "prop11": "%Rank%"
-              },
-			 "addEvent": ["event10:vote"]
-          }]
       }],
       "selector": "",
       "event": "shake",
@@ -3429,7 +3417,7 @@ _satellite.init({
     }
   ],
   "directCallRules": [
-
+    {"name":"EndVote","trigger":[{"engine":"sc","command":"trackLink","arguments":[{"setVars":{"eVar10":"%Sneak%","eVar11":"%Rank%","prop10":"%Sneak%","prop11":"%Rank%"},"addEvent":["event10"]}]}]}
   ],
   "settings": {
     "trackInternalLinks": true,

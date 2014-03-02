@@ -194,7 +194,8 @@ module.exports = function (grunt) {
                         'bootstrap': '../../app/bower_components/sass-bootstrap/dist/js/bootstrap',
                         'marionette': '../../app/bower_components/marionette/lib/core/amd/backbone.marionette.min',
                         'backbone.wreqr': '../../app/bower_components/backbone.wreqr/lib/amd/backbone.wreqr',
-                        'backbone.babysitter': '../../app/bower_components/backbone.babysitter/lib/amd/backbone.babysitter'
+                        'backbone.babysitter': '../../app/bower_components/backbone.babysitter/lib/amd/backbone.babysitter',
+                        'soundjs': '../../app/bower_components/SoundJS/lib/soundjs-0.5.2.min'
                     },
                     // TODO: Figure out how to make sourcemaps work with grunt-usemin
                     // https://github.com/yeoman/grunt-usemin/issues/30
@@ -275,7 +276,9 @@ module.exports = function (grunt) {
                         'images/{,*/}*.{webp,gif}',
                         'styles/fonts/{,*/}*.*',
                         'bower_components/sass-bootstrap/fonts/*.*',
-                        'dtm/**/*.*'
+                        'dtm/**/*.*',
+                        'images/**/*.*',
+                        'sfx/**/*.*'
                     ]
                 }]
             }

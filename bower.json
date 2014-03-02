@@ -10,7 +10,8 @@
     "requirejs-text": "",
     "modernizr": "",
     "marionette": "",
-    "swiper": ""
+    "swiper": "",
+    "SoundJS": "*"
   },
   "devDependencies": {}
 }

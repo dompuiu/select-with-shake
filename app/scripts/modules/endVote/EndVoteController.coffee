@@ -13,6 +13,7 @@ define [
           model: voteModel
 
         MyApp.mainRegion.show view
+        createjs.Sound.play 'shake'
 
     MyApp.commands.setHandler 'endVote', ->
       MyApp.vent.trigger 'endVote'

@@ -14,6 +14,8 @@ require.config
     bootstrap:
       deps: ['jquery']
       exports: 'jquery'
+    soundjs:
+      exports: 'createjs'
   paths:
     'jquery': '../bower_components/jquery/dist/jquery'
     'backbone': '../bower_components/backbone/backbone'
@@ -22,6 +24,7 @@ require.config
     'marionette': '../bower_components/marionette/lib/core/amd/backbone.marionette.min'
     'backbone.wreqr': '../bower_components/backbone.wreqr/lib/amd/backbone.wreqr'
     'backbone.babysitter': '../bower_components/backbone.babysitter/lib/amd/backbone.babysitter'
+    'soundjs': '../bower_components/SoundJS/lib/soundjs-0.5.2.min'
 
 require [
   'application'
