@@ -9,7 +9,7 @@ Use swipe gestures to select the option and it's rank. Shake the mobile device t
 You need to have Node, BowerJS and Yeoman installed on your machine. Then execute:
 
 ``
-npm install
+npm install\n
 bower install
 grunt serve
 ``
