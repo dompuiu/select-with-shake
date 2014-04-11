@@ -3,12 +3,12 @@ define [
   'templates'
 ], (MyApp, JST) ->
   MyApp.module "VotingApp.Slides", (VotingSlidesApp, MyApp, Backbone, Marionette, $, _, JST) ->
-    sneaks = []
+    options = []
     SwiperClass = VotingSlidesApp.SwiperClass
 
-    class VotingSlidesApp.SneaksView extends Marionette.CompositeView
+    class VotingSlidesApp.OptionsView extends Marionette.CompositeView
       onRender: ->
-        sneaks.unshift([@options.class, @options.index])
+        options.unshift([@options.class, @options.index])
 
         SwiperClass.setClass @options.class
         SwiperClass.setIndex @options.index
@@ -19,7 +19,7 @@ define [
           .addClass(SwiperClass.getFullClass('pagination'))
 
       onShow: ->
-        _.each sneaks, (value, index) =>
+        _.each options, (value, index) =>
           [cssClass, index] = value
           @initSwipe(cssClass, index)
 
@@ -34,13 +34,13 @@ define [
           onSlideChangeStart: (swiper) ->
             slide = $(swiper.activeSlide());
 
-            sneak = slide.data('sneak')
+            option = slide.data('option')
             rank = slide.data('rank')
 
             if not rank
               rank = $('.swiper-slide-active', slide).data('rank')
 
-            MyApp.vent.trigger 'sneakChange', sneak, rank
+            MyApp.vent.trigger 'optionChange', option, rank
 
         if not index?
           config.mode = 'horizontal'
@@ -54,7 +54,7 @@ define [
 
       className: 'swiper-view'
       itemViewContainer: '.swiper-wrapper'
-      template: JST['app/scripts/modules/slides/templates/Sneaks.ejs']
-      itemView: VotingSlidesApp.SneakView
+      template: JST['app/scripts/modules/slides/templates/Options.ejs']
+      itemView: VotingSlidesApp.OptionView
       emptyView: VotingSlidesApp.NoItemsView
   , JST

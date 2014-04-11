@@ -5,12 +5,12 @@ define [
   MyApp.module "VotingApp.Slides", (VotingSlidesApp, MyApp, Backbone, Marionette, $, _, JST) ->
     index = 1
 
-    class VotingSlidesApp.SneakView extends Marionette.ItemView
-      template: JST['app/scripts/modules/slides/templates/Sneak.ejs']
+    class VotingSlidesApp.OptionView extends Marionette.ItemView
+      template: JST['app/scripts/modules/slides/templates/Option.ejs']
 
       attributes: ->
         class: -> VotingSlidesApp.RandomClass.getClass()
-        'data-sneak': => @model.get('name')
+        'data-option': => @model.get('name')
         'data-rank': => @model.get('rank')
 
       getCollection: ->
@@ -25,7 +25,7 @@ define [
         collection
 
       getInnerSwiper: =>
-        view = new VotingSlidesApp.SneaksView
+        view = new VotingSlidesApp.OptionsView
           collection: @getCollection()
           class: 'nested'
           index: (-> index++)()

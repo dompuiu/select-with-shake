@@ -7,8 +7,8 @@ define [
   './models/SwiperClass'
   './models/RandomClass'
   './views/NoItems'
-  './views/Sneak'
-  './views/Sneaks'
+  './views/Option'
+  './views/Options'
 ], (require, MyApp, JST) ->
   MyApp.module "VotingApp.Slides", (VotingSlidesApp, MyApp, Backbone, Marionette, $, _, JST) ->
 
@@ -16,11 +16,11 @@ define [
       showSlider: ->
         voteModel = new VotingSlidesApp.VoteModel()
 
-        MyApp.vent.on 'sneakChange', (sneak, rank) ->
-          voteModel.set 'sneak', sneak
+        MyApp.vent.on 'optionChange', (option, rank) ->
+          voteModel.set 'option', option
           voteModel.set 'rank', rank
 
-        view = new VotingSlidesApp.SneaksView
+        view = new VotingSlidesApp.OptionsView
           collection: new Backbone.Collection MyApp.request("voting:options")
           class: 'parent'
 

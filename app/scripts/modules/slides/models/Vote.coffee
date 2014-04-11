@@ -5,36 +5,36 @@ define [
 
     class VotingSlidesApp.VoteModel extends Backbone.Model
       initialize: ->
-        @set('sneak', $('#selectoption').val())
+        @set('option', $('#selectoption').val())
         @set('rank', $('#selectrank').val())
 
         @on
-          "change:sneak": @sneakUpdate
+          "change:option": @optionUpdate
           "change:rank": @rankUpdate
 
-      sneakUpdate: (model, value) ->
+      optionUpdate: (model, value) ->
         $('#selectoption').val(value)
 
       rankUpdate: (model, value) ->
         $('#selectrank').val(value)
 
       getData: ->
-        sneaks = @getSneaks()
+        options = @getOptions()
         ranks = @getRanks()
 
-        _.each sneaks, (item, index) ->
+        _.each options, (item, index) ->
           item.ranks = ranks
           item.deep = true
 
-        sneaks
+        options
 
-      getSneaks: ->
-        sneaks = []
+      getOptions: ->
+        options = []
 
         $('#selectoption option').map () ->
-           sneaks.push(name: $(this).text())
+           options.push(name: $(this).text())
 
-        return sneaks
+        return options
 
       getRanks: ->
         ranks = []

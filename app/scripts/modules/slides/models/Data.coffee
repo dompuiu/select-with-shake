@@ -2,31 +2,31 @@ define [
   'application'
 ], (MyApp) ->
   MyApp.module "VotingApp.Data", (VotingSlidesApp, MyApp, Backbone, Marionette, $, _) ->
-    sneakSelect = $('#selectoption')
+    optionSelect = $('#selectoption')
     rankSelect = $('#selectrank')
 
     API =
       getCurrent: ->
-        sneak: sneakSelect.val()
+        option: optionSelect.val()
         rank: rankSelect.val()
 
       getData: ->
-        sneaks = @getSneaks()
+        options = @getOptions()
         ranks = @getRanks()
 
-        _.each sneaks, (item, index) ->
+        _.each options, (item, index) ->
           item.ranks = ranks
           item.deep = true
 
-        sneaks
+        options
 
-      getSneaks: ->
-        sneaks = []
+      getOptions: ->
+        options = []
 
-        $('option', sneakSelect).map ->
-           sneaks.push(name: $(this).text())
+        $('option', optionSelect).map ->
+           options.push(name: $(this).text())
 
-        sneaks
+        options
 
       getRanks: ->
         ranks = []
