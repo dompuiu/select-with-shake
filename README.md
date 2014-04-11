@@ -14,6 +14,6 @@ bower install
 grunt serve
 ```
 
-**Demo:**
+**Demo:**  
 You can see a demo [here](http://dompuiu.github.com/select-with-shake/dist/index.html).
 
