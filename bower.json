@@ -1,6 +1,6 @@
 {
-  "name": "sneak",
-  "version": "0.0.0",
+  "name": "select-with-shake",
+  "version": "1.0.0",
   "dependencies": {
     "sass-bootstrap": "",
     "jquery": "",
