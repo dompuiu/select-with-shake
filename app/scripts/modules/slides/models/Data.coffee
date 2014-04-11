@@ -2,7 +2,7 @@ define [
   'application'
 ], (MyApp) ->
   MyApp.module "VotingApp.Data", (VotingSlidesApp, MyApp, Backbone, Marionette, $, _) ->
-    sneakSelect = $('#selectsneak')
+    sneakSelect = $('#selectoption')
     rankSelect = $('#selectrank')
 
     API =

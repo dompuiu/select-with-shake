@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>DTM Sneak</title>
+        <title>Select with Shake</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -17,23 +17,25 @@
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
 
-        <script src="dtm/satelliteLib.js"></script>
+        <!-- build:js scripts/vendor/shake.js -->
+        <script src="bower_components/shake.js/shake.js"></script>
+        <!-- endbuild -->
 
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
     </head>
     <body>
-      <div id="sneak">
-        <select name="selectsneak" id="selectsneak">
-          <option>Sneak 1</option>
-          <option>Sneak 2</option>
-          <option>Sneak 3</option>
-          <option>Sneak 4</option>
-          <option>Sneak 5</option>
+      <div id="options-container">
+        <select name="option" id="selectoption">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+          <option>Option 4</option>
+          <option>Option 5</option>
         </select>
 
-        <select name="selectrank" id="selectrank">
+        <select name="rank" id="selectrank">
           <option>1</option>
           <option>2</option>
           <option>3</option>

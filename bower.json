@@ -11,7 +11,8 @@
     "modernizr": "",
     "marionette": "",
     "swiper": "",
-    "SoundJS": "*"
+    "SoundJS": "*",
+    "shake.js": ""
   },
   "devDependencies": {}
 }

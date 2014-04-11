@@ -1,1 +1,0 @@
-MyApp.vent.trigger('shake')

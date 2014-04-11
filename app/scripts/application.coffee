@@ -28,6 +28,8 @@ define [
 
 
   window.MyApp = MyApp = new Marionette.Application()
+  window.addEventListener 'shake', ->
+    MyApp.vent.trigger 'shake'
 
   MyApp.addRegions
       mainRegion: '#main-region'
@@ -36,9 +38,6 @@ define [
 
   MyApp.commands.setHandler 'reload', ->
     location.reload()
-
-  MyApp.vent.on 'endVote', ->
-    _satellite.track 'EndVote'
 
   MyApp.on 'initialize:after', ->
     initSound ->
